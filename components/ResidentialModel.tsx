@@ -7,7 +7,7 @@ import * as THREE from 'three';
 
 type GLTFResult = any; // keep flexible for auto-generated gltfjsx outputs
 
-export default function ResidentialModel({ modelPath, ...props }: { modelPath: string } & JSX.IntrinsicElements['group']) {
+export default function ResidentialModel({ modelPath, ...props }: { modelPath: string } & React.ComponentProps<'group'>) {
     // If using DRACO or meshopt you can configure loaders globally during app init,
     // or use useGLTF with a DRACO decoder path if necessary.
     const gltf = useGLTF(modelPath) as GLTFResult;
