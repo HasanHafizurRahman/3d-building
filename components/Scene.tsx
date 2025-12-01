@@ -12,7 +12,7 @@ interface SceneProps {
 export default function Scene({ onFloorClick }: SceneProps) {
     return (
         <div className="w-full h-screen bg-gray-50">
-            <Canvas camera={{ position: [15, 10, 10], fov: 45 }}>
+            <Canvas camera={{ position: [0, 10, 20], fov: 45 }}>
                 <ambientLight intensity={0.2} />
                 <directionalLight
                     position={[5, 10, 5]}
