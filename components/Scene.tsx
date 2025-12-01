@@ -12,11 +12,11 @@ interface SceneProps {
 export default function Scene({ onFloorClick }: SceneProps) {
     return (
         <div className="w-full h-screen bg-gray-50">
-            <Canvas camera={{ position: [10, 10, 10], fov: 45 }}>
+            <Canvas camera={{ position: [15, 10, 10], fov: 45 }}>
                 <ambientLight intensity={0.2} />
                 <directionalLight
                     position={[5, 10, 5]}
-                    intensity={0.8}
+                    intensity={1}
                     castShadow
                     shadow-mapSize-width={2048}
                     shadow-mapSize-height={2048}
@@ -29,10 +29,8 @@ export default function Scene({ onFloorClick }: SceneProps) {
                 </group>
 
                 <OrbitControls
-                    autoRotate
-                    autoRotateSpeed={0.5}
                     enablePan={false}
-                    minPolarAngle={Math.PI / 4}
+                    minPolarAngle={Math.PI / 2}
                     maxPolarAngle={Math.PI / 2}
                 />
             </Canvas>
