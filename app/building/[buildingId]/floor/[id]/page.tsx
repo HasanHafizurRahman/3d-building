@@ -34,7 +34,7 @@ export default async function FloorPage({
                 </Link>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 {/* Hero Section - Map with Overlays */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-12 group">
                     <div className="relative h-[600px]">

@@ -25,7 +25,7 @@ export default function Home() {
     <main className="min-h-screen w-full bg-gradient-to-br from-slate-50 to-blue-50 text-slate-900">
       {/* Enhanced Header with Branding */}
       <header className="fixed inset-x-0 top-0 z-40 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4">
+        <div className="max-w-8xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4">
           <div className="flex items-center gap-3">
             <div className="rounded-md bg-gradient-to-br from-gray-600 to-gray-900 p-2 text-white font-bold">EP</div>
             <div className="leading-tight">
@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* Building Selector */}
       <section className="pt-20 px-6 sm:px-12 py-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <h1 className="text-3xl font-bold mb-6 text-center">Our Premium Properties</h1>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {buildingsData.map((building) => (
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Building Features */}
-      <section id="features" className="max-w-7xl mx-auto px-6 sm:px-12 py-16">
+      <section id="features" className="max-w-8xl mx-auto px-6 sm:px-12 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Building Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {selectedBuilding.features.map((feature, index) => (
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" className="max-w-7xl mx-auto px-6 sm:px-12 py-12">
+      <section id="gallery" className="max-w-8xl mx-auto px-6 sm:px-12 py-12">
         <h3 className="text-3xl font-bold mb-6 text-center">Gallery</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="h-80 rounded-2xl overflow-hidden bg-gray-100 shadow-md transition-all hover:shadow-2xl hover:scale-105">
@@ -126,7 +126,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-gray-600 to-gray-900 py-16">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
+        <div className="max-w-8xl mx-auto px-6 sm:px-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Interested in {selectedBuilding.name}?</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">Schedule a personalized tour to experience these premium properties in person. Our team is ready to assist you with all your real estate needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -138,7 +138,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-white/30 py-10 bg-white/50 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-8xl mx-auto px-6 sm:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <div className="text-xl font-bold">Elite Properties</div>
             <div className="text-base text-slate-500">Premium Real Estate Solutions</div>
