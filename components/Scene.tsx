@@ -1,16 +1,21 @@
+// Update the Scene component to handle different building models
+
+// components/Scene.tsx
 'use client';
 
-import { Canvas, useThree } from '@react-three/fiber'; // Moved useThree import here if needed, but it's used inside
+import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, Environment, ContactShadows, Loader } from '@react-three/drei';
 import Building from './Building';
 import { FloorData } from '@/lib/data';
 import { Suspense, useRef, useEffect } from 'react';
 
 interface SceneProps {
+    buildingModelPath: string;
+    floors: FloorData[];
     onFloorClick: (floor: FloorData) => void;
 }
 
-function InnerScene({ onFloorClick }: SceneProps) {
+function InnerScene({ buildingModelPath, floors, onFloorClick }: SceneProps) {
     const { performance } = useThree();
     const controlsRef = useRef(null);
 
@@ -37,7 +42,7 @@ function InnerScene({ onFloorClick }: SceneProps) {
 
             <Suspense fallback={null}>
                 <group position={[0, -1, 0]}>
-                    <Building onFloorClick={onFloorClick} />
+                    <Building modelPath={buildingModelPath} floors={floors} onFloorClick={onFloorClick} />
                     <ContactShadows position={[0, -2, 0]} opacity={0.5} scale={20} blur={2} far={4.5} />
                 </group>
             </Suspense>
@@ -52,7 +57,7 @@ function InnerScene({ onFloorClick }: SceneProps) {
     );
 }
 
-export default function Scene({ onFloorClick }: SceneProps) {
+export default function Scene({ buildingModelPath, floors, onFloorClick }: SceneProps) {
     return (
         <div className="w-full h-screen bg-gray-50">
             <Canvas
@@ -61,7 +66,7 @@ export default function Scene({ onFloorClick }: SceneProps) {
                 shadows
                 performance={{ min: 0.5 }}
             >
-                <InnerScene onFloorClick={onFloorClick} />
+                <InnerScene buildingModelPath={buildingModelPath} floors={floors} onFloorClick={onFloorClick} />
             </Canvas>
             <Loader
                 containerStyles={{ background: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(10px)' }}

@@ -1,27 +1,32 @@
+// Update the Building component to handle different models
+
+// components/Building.tsx
 'use client';
 
 import React, { useState, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Html, useCursor } from '@react-three/drei';
-import { buildingData, FloorData } from '@/lib/data';
+import { Html, useCursor, useGLTF } from '@react-three/drei';
+import { FloorData } from '@/lib/data';
 import * as THREE from 'three';
-import { ResidentialModel } from './ResidentialModel';
 
 interface BuildingProps {
+    modelPath: string;
+    floors: FloorData[];
     onFloorClick: (floor: FloorData) => void;
 }
 
-export default function Building({ onFloorClick }: BuildingProps) {
+export default function Building({ modelPath, floors, onFloorClick }: BuildingProps) {
     const [hoveredFloor, setHoveredFloor] = useState<string | null>(null);
+    const { scene } = useGLTF(modelPath);
 
     return (
         <group position={[0, -4, 0]}>
             {/* The Visual Model */}
-            <ResidentialModel scale={0.5} />
+            <primitive object={scene} scale={0.5} />
 
             {/* Interactive Hitboxes */}
             <group position={[0, 2, 0]}>
-                {buildingData.map((floor, index) => (
+                {floors.map((floor, index) => (
                     <FloorHitbox
                         key={floor.id}
                         data={floor}
