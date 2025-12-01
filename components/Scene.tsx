@@ -13,9 +13,15 @@ export default function Scene({ onFloorClick }: SceneProps) {
     return (
         <div className="w-full h-screen bg-gray-50">
             <Canvas camera={{ position: [10, 10, 10], fov: 45 }}>
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
-                <Environment preset="city" />
+                <ambientLight intensity={0.2} />
+                <directionalLight
+                    position={[5, 10, 5]}
+                    intensity={0.8}
+                    castShadow
+                    shadow-mapSize-width={2048}
+                    shadow-mapSize-height={2048}
+                />
+                <Environment preset="night" />
 
                 <group position={[0, -1, 0]}>
                     <Building onFloorClick={onFloorClick} />
