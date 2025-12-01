@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.5.3 public/models/residential_building.glb --types
 */
 
 import * as THREE from 'three'
-import React from 'react'
+import React, { JSX } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -113,11 +113,10 @@ type GLTFResult = GLTF & {
     ['m.GlassReal.002']: THREE.MeshStandardMaterial
     Roof: THREE.MeshStandardMaterial
   }
-  animations: GLTFAction[]
 }
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/residential_building-compressed.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/residential_building-compressed.glb') as unknown as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_5.geometry} material={materials['m.StoneTile.001']} />
