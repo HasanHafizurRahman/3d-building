@@ -28,7 +28,7 @@ export default async function BuildingPage({
         <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-slate-900">
             {/* Header */}
             <header className="fixed inset-x-0 top-0 z-40 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-                <div className="max-w-8xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4">
+                <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 sm:px-12 py-4">
                     <Link href="/" className="flex items-center gap-3">
                         <div className="rounded-md bg-gradient-to-br from-gray-600 to-gray-900 p-2 text-white font-bold">EP</div>
                         <div className="leading-tight">
@@ -72,7 +72,7 @@ export default async function BuildingPage({
             </section>
 
             {/* Building Details */}
-            <section className="max-w-8xl mx-auto px-6 sm:px-12 py-16">
+            <section className="max-w-[1440px] mx-auto px-6 sm:px-12 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2 space-y-8">
                         <div className="bg-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/40">
@@ -159,7 +159,7 @@ export default async function BuildingPage({
 
             {/* Footer */}
             <footer className="border-t border-white/30 py-10 bg-white/50 backdrop-blur-xl">
-                <div className="max-w-8xl mx-auto px-6 sm:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="max-w-[1440px] mx-auto px-6 sm:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
                         <div className="text-xl font-bold">Elite Properties</div>
                         <div className="text-base text-slate-500">Premium Real Estate Solutions</div>

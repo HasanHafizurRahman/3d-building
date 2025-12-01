@@ -26,6 +26,41 @@ export interface BuildingData {
 }
 
 export const buildingsData: BuildingData[] = [
+
+    {
+        id: 'mini-office',
+        name: 'Mini Office Complex',
+        modelPath: '/models/mini-office-building.glb',
+        description: 'Modern office complex designed for startups and SMEs. Features flexible floor plans, collaborative spaces, and state-of-the-art facilities.',
+        location: 'Road 5, Gulshan, Dhaka',
+        totalFloors: 4,
+        possession: 'Under Construction',
+        features: ['Flexible Spaces', 'High-Speed Internet', 'Conference Facilities', 'Parking'],
+        floors: [
+            {
+                id: 'mini-floor-1',
+                level: 1,
+                name: 'Ground Floor - Commercial',
+                price: '$950,000',
+                size: '2,800 sqft',
+                description: 'Ground floor commercial space with high visibility and direct street access. Ideal for retail or banking.',
+                mapUrl: '/assets/office-floor-1.png',
+                color: '#dbeafe',
+                benefits: ['High Visibility', 'Direct Street Access', 'Premium Location', 'Modern Design'],
+            },
+            {
+                id: 'mini-floor-2',
+                level: 2,
+                name: '2nd Floor - Office',
+                price: '$750,000',
+                size: '2,500 sqft',
+                description: 'Flexible office space with customizable layouts. Perfect for growing businesses and tech startups.',
+                mapUrl: '/assets/office-floor-2.png',
+                color: '#bfdbfe',
+                benefits: ['Customizable Layout', 'Natural Lighting', 'High-Speed Internet', 'Modern Facilities'],
+            }
+        ]
+    },
     {
         id: 'skyline-heights',
         name: 'South Tower',
@@ -93,40 +128,6 @@ export const buildingsData: BuildingData[] = [
             },
         ]
     },
-    {
-        id: 'mini-office',
-        name: 'Mini Office Complex',
-        modelPath: '/models/mini-office-building.glb',
-        description: 'Modern office complex designed for startups and SMEs. Features flexible floor plans, collaborative spaces, and state-of-the-art facilities.',
-        location: 'Road 5, Gulshan, Dhaka',
-        totalFloors: 4,
-        possession: 'Under Construction',
-        features: ['Flexible Spaces', 'High-Speed Internet', 'Conference Facilities', 'Parking'],
-        floors: [
-            {
-                id: 'mini-floor-1',
-                level: 1,
-                name: 'Ground Floor - Commercial',
-                price: '$950,000',
-                size: '2,800 sqft',
-                description: 'Ground floor commercial space with high visibility and direct street access. Ideal for retail or banking.',
-                mapUrl: '/assets/office-floor-1.png',
-                color: '#dbeafe',
-                benefits: ['High Visibility', 'Direct Street Access', 'Premium Location', 'Modern Design'],
-            },
-            {
-                id: 'mini-floor-2',
-                level: 2,
-                name: '2nd Floor - Office',
-                price: '$750,000',
-                size: '2,500 sqft',
-                description: 'Flexible office space with customizable layouts. Perfect for growing businesses and tech startups.',
-                mapUrl: '/assets/office-floor-2.png',
-                color: '#bfdbfe',
-                benefits: ['Customizable Layout', 'Natural Lighting', 'High-Speed Internet', 'Modern Facilities'],
-            }
-        ]
-    }
 ];
 
 // Helper function to get building by ID
