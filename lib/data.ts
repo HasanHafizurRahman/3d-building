@@ -28,7 +28,7 @@ export interface BuildingData {
 export const buildingsData: BuildingData[] = [
     {
         id: 'skyline-heights',
-        name: 'Skyline Heights',
+        name: 'South Tower',
         modelPath: '/models/residential_building-compressed.glb',
         description: 'Premium residential building located in Bashundhara R/A offering 1–4 BHK options with modern amenities and panoramic city views.',
         location: 'Road 10, Bashundhara R/A, Dhaka',

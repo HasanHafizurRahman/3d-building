@@ -8,9 +8,9 @@ import Scene from '@/components/Scene';
 import { buildingsData, BuildingData, FloorData } from '@/lib/data';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Gallery1 from '../public/assets/gallery-1.png';
+import Gallery1 from '../public/assets/gallery-1.jpg';
 import Gallery2 from '../public/assets/gallery-2.jpg';
-import Gallery3 from '../public/assets/gallery-3.png';
+import Gallery3 from '../public/assets/gallery-3.jpg';
 
 export default function Home() {
   const router = useRouter();
@@ -27,14 +27,14 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-40 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4">
           <div className="flex items-center gap-3">
-            <div className="rounded-md bg-gradient-to-br from-blue-600 to-purple-600 p-2 text-white font-bold">EP</div>
+            <div className="rounded-md bg-gradient-to-br from-gray-600 to-gray-900 p-2 text-white font-bold">EP</div>
             <div className="leading-tight">
               <div className="text-sm font-extrabold">Elite Properties</div>
               <div className="text-xs text-slate-500">Premium Real Estate Solutions</div>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-3">
-            <button onClick={() => router.push('/contact')} className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105">Schedule Viewing</button>
+            <button onClick={() => router.push('/contact')} className="bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105">Schedule Viewing</button>
           </div>
         </div>
       </header>
@@ -49,7 +49,7 @@ export default function Home() {
                 key={building.id}
                 onClick={() => setSelectedBuildingId(building.id)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all ${selectedBuildingId === building.id
-                  ? 'bg-blue-600 text-white shadow-lg'
+                  ? 'bg-gray-800 text-white shadow-lg'
                   : 'bg-white/70 backdrop-blur-xl text-slate-700 hover:bg-white/90'
                   }`}
               >
@@ -91,12 +91,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Controls */}
-        <div className="absolute right-6 top-6 z-30 flex flex-col gap-2">
-          <button onClick={() => window.dispatchEvent(new Event('reset-orbit'))} className="bg-white/85 backdrop-blur-md px-3 py-2 rounded-lg shadow border text-sm">Reset View</button>
-          <button onClick={() => window.dispatchEvent(new Event('toggle-autorotate'))} className="bg-white/85 backdrop-blur-md px-3 py-2 rounded-lg shadow border text-sm">Auto Rotate</button>
-        </div>
       </section>
 
       {/* Building Features */}
@@ -105,7 +99,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {selectedBuilding.features.map((feature, index) => (
             <div key={index} className="bg-white/70 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/40 transition-all hover:shadow-2xl hover:scale-105 text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">{index + 1}</span>
               </div>
               <h3 className="text-lg font-semibold">{feature}</h3>
@@ -131,13 +125,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-purple-600 py-16">
+      <section className="bg-gradient-to-br from-gray-600 to-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Interested in {selectedBuilding.name}?</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">Schedule a personalized tour to experience these premium properties in person. Our team is ready to assist you with all your real estate needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => router.push('/contact')} className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105">Schedule Viewing</button>
-            <button className="bg-blue-500/30 backdrop-blur-sm hover:bg-blue-500/40 text-white font-semibold px-8 py-3 rounded-lg transition-all border-2 border-white/30 hover:border-white/50">Download Brochure</button>
+            <button onClick={() => router.push('/contact')} className="bg-white text-gray-600 px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105">Schedule Viewing</button>
+            <button className="bg-gray-500/30 backdrop-blur-sm hover:bg-blue-500/40 text-white font-semibold px-8 py-3 rounded-lg transition-all border-2 border-white/30 hover:border-white/50">Download Brochure</button>
           </div>
         </div>
       </section>

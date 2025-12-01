@@ -109,10 +109,10 @@ function FloorHitbox({ data, position, isHovered, onHover, onClick }: FloorHitbo
                             <h3 className="font-bold text-gray-900 text-base leading-tight">{data.name}</h3>
                             <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-500 font-medium">{data.size}</span>
-                                <span className="text-blue-600 font-bold text-lg">{data.price}</span>
+                                <span className="text-gray-800 font-bold text-lg">{data.price}</span>
                             </div>
                             <div className="pt-2 border-t border-gray-200">
-                                <p className="text-xs text-blue-600 uppercase tracking-wider font-semibold">Click to view details</p>
+                                <p className="text-xs text-gray-800 uppercase tracking-wider font-semibold">Click to view details</p>
                             </div>
                         </div>
                     </div>
