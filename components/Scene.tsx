@@ -42,7 +42,7 @@ function InnerScene({ buildingModelPath, floors, onFloorClick }: SceneProps) {
                 shadow-mapSize-width={1024}
                 shadow-mapSize-height={1024}
             />
-            <Environment preset="night" />
+            {/* <Environment preset="night" /> */}
 
             <Suspense fallback={null}>
                 <group position={[0, 2, 0]}>
